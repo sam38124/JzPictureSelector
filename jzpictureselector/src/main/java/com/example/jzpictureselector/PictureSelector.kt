@@ -26,6 +26,7 @@ object PictureSelector{
 
             override fun requestSuccess(a: String) {
                 resize+=1
+                if(resize!=2){return}
                 Matisse.from(con)
                     .choose(MimeType.ofImage())//图片类型
                     .countable(false)//true:选中后显示数字;false:选中后显示对号
@@ -55,6 +56,7 @@ object PictureSelector{
 
             override fun requestSuccess(a: String) {
                 resize+=1
+                if(resize!=2){return}
                 Matisse.from(con)
                     .choose(MimeType.ofImage())//图片类型
                     .countable(false)//true:选中后显示数字;false:选中后显示对号
